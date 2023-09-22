@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body onload="pageLoading()" style="margin: 0">
+    <div id="loader"></div>
+    <div id="content" class="animate-bottom">
+      <section class="login-body">
+        <div class="bg-login-blue">
+          <h2>Selamat <br /><span>Datang</span></h2>
+          <p>Silahkan login terlebih dahulu untuk dapat mengakses website.</p>
+          <div class="hr"></div>
+          <small
+            >Copyright &copy; Institute Logo 2023 All rights reserved.
+          </small>
+        </div>
+        <div class="bg-login-white">
+          <img
+            src="assets/images/logo.png"
+            alt="Institute Logo"
+            class="login-logo"
+          />
+          <div class="hr"></div>
+          <form action="#" autocomplete="off">
+            <div class="form-group">
+              <label for="NISN">Nomer Induk Siswa Nasional :</label>
+              <input
+                class="form-input"
+                type="text"
+                placeholder="Masukan NISN..."
+              />
+            </div>
+            <div class="lay-right">
+              <div class="form-group">
+                <input type="checkbox" id="rememberMe" />
+                <label for="rememberMe">Ingat Saya?</label>
+              </div>
+            </div>
+          </form>
+          <a href="index.html" class="btn-main full-width">Masuk</a>
+        </div>
+      </section>
+    </div>
+  </body>
+  <script src="assets/page.js"></script>
+</html>
