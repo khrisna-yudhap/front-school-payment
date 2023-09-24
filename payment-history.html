@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Riwayat Pembayaran - Your Institute</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body>
+    <!-- Page Content -->
+    <div class="container">
+      <!-- Navigation Section -->
+      <section class="navigation">
+        <nav
+          class="navbar navbar-expand-lg navbar-light bg-light navbar-fixed-top"
+        >
+          <a class="navbar-brand" href="index.html">
+            <img
+              src="assets/images/logo.png"
+              alt="Institute Logo"
+              class="school-logo"
+            />
+          </a>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Beranda</a>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle menu-active"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  Pembayaran
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">
+                    <i class="bi bi-wallet-fill"></i>
+                    <span>&nbsp;Tagihan Pembayaran</span></a
+                  >
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">
+                    <i class="bi bi-clock-history"></i>
+                    <span>&nbsp;Riwayat Pembayaran</span>
+                  </a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Sumbangan</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="profile-menu">
+                  <i class="bi bi-person-lines-fill"></i>
+                  <span>&nbsp;Profil Siswa</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <div class="hr"></div>
+      </section>
+      <!-- End Navigation Section -->
+      <!-- Content Section -->
+      <section class="content">
+        <div class="payment-history">
+          <h3>Riwayat Pembayaran</h3>
+          <div class="sort-by">
+            <button class="sort-btn sort-active">Semua</button>
+            <button class="sort-btn">Berhasil</button>
+            <button class="sort-btn">Pending</button>
+            <button class="sort-btn">Gagal</button>
+          </div>
+        </div>
+      </section>
+      <!-- End Page Content -->
+    </div>
+    <!-- Footer -->
+    <footer>
+      <div class="footer-layout">
+        <div class="footer-info">
+          <div class="footer-logo">
+            <img
+              src="assets/images/logo_white.png"
+              alt="Institute White Logo"
+            />
+          </div>
+          <div class="footer-address">
+            <h2>Alamat Sekolah</h2>
+            <p>
+              Gedung Pusat :
+              <br /><span
+                >Jl. Jendral Ahmad Yani No. 55, Blok O, Jakarta Selatan
+                228819</span
+              >
+            </p>
+          </div>
+        </div>
+        <div class="footer-menu">
+          <h2>Menu Utama</h2>
+          <ul>
+            <li><a href="#">Beranda</a></li>
+            <li><a href="#">Pembayaran</a></li>
+            <li><a href="#">Sumbangan</a></li>
+            <li><a href="#">Profil Siswa</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact">
+          <h2>Kontak Kami</h2>
+          <a href="mailto: abc@example.com" class="footer-email">
+            <i class="bi bi-envelope-fill"></i>
+            <span>yourinstitute@ac.id</span>
+          </a>
+
+          <a href="tel:55777222" class="footer-phone">
+            <i class="bi bi-telephone-fill"></i>
+            <span>55-777-222</span>
+          </a>
+          <div class="media-social">
+            <a href="#">
+              <img src="assets/images/fb-square.png" alt="Your Facebook" />
+            </a>
+            <a href="#">
+              <img src="assets/images/insta-square.png" alt="Your Instagram" />
+            </a>
+            <a href="#">
+              <img src="assets/images/twitter-square.png" alt="Your Twitter" />
+            </a>
+            <a href="#">
+              <img src="assets/images/youtube-square.png" alt="Your Youtube" />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-copyright">
+        Copyright &copy; Institute Logo 2023 All rights reserved.
+      </div>
+    </footer>
+  </body>
+  <script src="assets/page.js"></script>
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"
+  ></script>
+</html>

@@ -612,9 +612,6 @@ body {
   margin: 0;
 }
 
-.table-caption p {
-}
-
 .table-caption {
   width: 100%;
 
@@ -650,8 +647,179 @@ body {
 
 /* End Informasi Pembayaran Style */
 
+/* Footer Style */
+
+footer {
+  background-color: #05629f;
+  padding: 50px 0px 0px 0px;
+
+  margin-top: 50px;
+}
+
+.footer-layout {
+  display: flex;
+  gap: 100px;
+  justify-content: center;
+  align-items: start;
+}
+
+.footer-info {
+  max-width: 30%;
+}
+
+.footer-info .footer-logo img {
+  max-width: 23em;
+}
+
+.footer-address {
+  padding: 30px;
+}
+
+.footer-info .footer-address h2 {
+  font-size: 24px;
+  font-weight: 600;
+
+  color: #fff;
+}
+
+.footer-info .footer-address p {
+  color: #fff;
+  font-weight: 500;
+}
+
+.footer-info .footer-address span {
+  font-weight: 200;
+}
+
+.footer-menu h2 {
+  font-size: 24px;
+  font-weight: 600;
+
+  color: #fff;
+}
+
+.footer-menu ul {
+  padding: 0px 30px;
+  color: #fff;
+}
+
+.footer-menu ul li {
+  padding: 10px;
+}
+.footer-menu ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.footer-menu ul li a:hover {
+  text-decoration: underline;
+  color: #fff;
+}
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer-contact a:hover {
+  text-decoration: underline !important;
+  color: #fff !important;
+}
+
+.footer-contact h2 {
+  font-size: 24px;
+  font-weight: 600;
+
+  color: #fff;
+}
+
+.footer-email {
+  display: flex;
+  gap: 10px;
+  justify-content: start;
+  align-items: center;
+
+  color: #fff;
+}
+
+.footer-email i {
+  font-size: 22px;
+  line-height: 0.5;
+}
+
+.footer-email span {
+  font-size: 16px;
+}
+
+.footer-phone {
+  display: flex;
+  gap: 10px;
+  justify-content: start;
+  align-items: center;
+
+  color: #fff;
+}
+
+.footer-phone i {
+  font-size: 22px;
+  line-height: 0.5;
+}
+
+.footer-phone span {
+  font-size: 16px;
+}
+
+.footer-contact .media-social {
+  display: flex;
+  gap: 30px;
+  justify-content: start;
+  align-items: center;
+}
+
+.footer-copyright {
+  background-color: #333333;
+  color: #aaa;
+  font-size: 14px;
+  padding: 10px;
+  text-align: center;
+}
+/* End Footer Style */
+
+/* Payment Page */
+.payment-history h3 {
+  font-weight: 600;
+  color: #333;
+}
+
+.payment-history .sort-by {
+  margin: 30px 0px;
+}
+
+.sort-btn {
+  padding: 10px 30px;
+  background-color: #fff;
+  border: 1px solid #9c9c9c;
+  border-radius: 10px;
+
+  color: #333;
+  font-weight: 500;
+}
+
+.sort-active {
+  border: 1px solid #068cc3;
+}
+
+.sort-success {
+  padding: 10px 30px;
+  background-color: #fff;
+  border: 1px solid #9c9c9c;
+  border-radius: 10px;
+}
+/* Payment Page End */
+
 /* Mobile Device */
-@media only screen and (max-width: 40em) {
+@media (min-width: 320px) and (max-width: 480px) {
   .login-body {
     flex-direction: column;
     min-height: 100vh;
@@ -839,6 +1007,7 @@ body {
 
   .table-caption .btn-bayar {
     width: 85vw;
+    font-size: 16px;
   }
 
   .table td,
@@ -871,5 +1040,197 @@ body {
     font-size: 12px;
     text-align: start;
     vertical-align: middle;
+  }
+
+  .footer-layout {
+    gap: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+
+    padding: 30px 30px;
+  }
+
+  .footer-info {
+    max-width: 100%;
+  }
+
+  .footer-address {
+    padding: 30px 0px 0px 0px;
+  }
+
+  .footer-info .footer-logo img {
+    width: 80vw;
+  }
+
+  .footer-info .footer-address h2 {
+    font-size: 18px;
+  }
+
+  .footer-info .footer-address p {
+    padding: 0px 20px;
+    font-size: 14px;
+  }
+
+  .footer-menu h2 {
+    font-size: 18px;
+  }
+
+  .footer-menu ul {
+    padding: 0px 40px;
+  }
+
+  .footer-menu ul li {
+    padding: 0px 0px;
+    font-size: 14px;
+  }
+
+  .footer-email {
+    padding: 0px 20px;
+  }
+
+  .footer-phone {
+    padding: 0px 20px;
+  }
+
+  .footer-contact {
+    gap: 10px;
+  }
+
+  .footer-contact h2 {
+    font-size: 18px;
+  }
+
+  .footer-email span {
+    font-size: 14px;
+  }
+
+  .footer-phone span {
+    font-size: 14px;
+  }
+
+  .footer-contact .media-social {
+    padding: 20px 20px;
+  }
+
+  .footer-copyright {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  /* CSS */
+  .welcomer {
+    width: 40vw;
+  }
+
+  .welcomer h3 {
+    font-size: 1.5em;
+  }
+
+  .notification i {
+    font-size: 32px;
+  }
+
+  .student-data .layout {
+    flex-wrap: wrap;
+    gap: 2em;
+  }
+
+  .student-profile .student-data .student-address {
+    width: 100%;
+  }
+
+  .table-caption {
+    gap: 0;
+    flex-wrap: wrap;
+  }
+
+  .footer-layout {
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 30px;
+    justify-content: space-between;
+  }
+
+  .footer-info .footer-logo img {
+    max-width: 100%;
+  }
+
+  .footer-address {
+    padding: 20px 0px;
+  }
+
+  .footer-info .footer-address h2 {
+    font-size: 18px;
+  }
+
+  .footer-info .footer-address p {
+    padding: 10px 10px;
+    font-size: 14px;
+  }
+
+  .footer-menu h2 {
+    font-size: 18px;
+  }
+
+  .footer-menu ul {
+    padding: 0px 40px;
+  }
+
+  .footer-menu ul li {
+    padding: 10px 10px;
+    font-size: 14px;
+  }
+
+  .footer-contact {
+    gap: 10px;
+  }
+
+  .footer-contact h2 {
+    font-size: 18px;
+  }
+
+  .footer-email span {
+    font-size: 14px;
+  }
+
+  .footer-phone span {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* CSS */
+
+  .welcomer {
+    width: 40vw;
+  }
+
+  .student-data .layout {
+    flex-wrap: wrap;
+    gap: 2em;
+  }
+
+  .student-data .layout .student-address {
+    width: 100%;
+  }
+
+  .table-caption {
+    gap: 0px;
+    flex-wrap: wrap;
+  }
+
+  .footer-layout {
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .footer-info .footer-logo img {
+    width: 100%;
+  }
+
+  .footer-address {
+    padding: 30px 10px;
   }
 }
