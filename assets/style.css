@@ -888,6 +888,66 @@ footer {
 
 /* Payment History Page End */
 
+/* Payment Bill Page Style */
+
+.payment-bill {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.payment-bill-title {
+  width: 70%;
+}
+
+.payment-bill-title h3 {
+  font-weight: 600;
+  color: #333;
+}
+
+.payment-bill-title p {
+  font-size: 16px;
+  text-align: justify;
+}
+
+.payment-bill-title p a {
+  color: #068cc3;
+}
+
+.payment-history-btn {
+  border: 1px solid #068cc3;
+  background-color: #068cc3;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.payment-history-btn i {
+  line-height: 0.8;
+  font-size: 20px;
+
+  vertical-align: top;
+  color: #fff;
+
+  border-radius: 10px;
+}
+.payment-history-btn span {
+  font-size: 16px;
+  color: #fff;
+  font-weight: 500;
+}
+.payment-history-btn:hover {
+  text-decoration: none;
+  background-color: #05629f;
+}
+
+.payment-history-btn:hover i {
+  color: #fff;
+}
+
+.payment-history-btn:hover span {
+  color: #fff;
+}
+/* Payment Bill Page Style End */
 /* Mobile Device */
 @media (min-width: 320px) and (max-width: 480px) {
   .login-body {
@@ -1244,6 +1304,8 @@ footer {
     font-weight: 600;
     font-size: 14px;
   }
+
+  /* Tagihan Page */
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
