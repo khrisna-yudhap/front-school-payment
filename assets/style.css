@@ -786,7 +786,7 @@ footer {
 }
 /* End Footer Style */
 
-/* Payment Page */
+/* Payment History Page */
 .payment-history h3 {
   font-weight: 600;
   color: #333;
@@ -794,6 +794,9 @@ footer {
 
 .payment-history .sort-by {
   margin: 30px 0px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
 .sort-btn {
@@ -810,13 +813,80 @@ footer {
   border: 1px solid #068cc3;
 }
 
-.sort-success {
-  padding: 10px 30px;
-  background-color: #fff;
-  border: 1px solid #9c9c9c;
-  border-radius: 10px;
+/* Table Style */
+.payment-history table {
+  margin-top: 50px;
 }
-/* Payment Page End */
+
+.payment-history .table thead tr th {
+  border: 0;
+  border-bottom: 1px solid #9c9c9c;
+  text-align: center;
+  font-weight: 500;
+
+  color: #333;
+}
+
+.payment-history .table tbody tr {
+  text-align: center;
+  color: #333;
+}
+
+.payment-history .table td,
+.table th {
+  vertical-align: middle;
+}
+
+.payment-history .table tbody tr .status-success {
+  color: #068cc3;
+  font-weight: 600;
+}
+.payment-history .table tbody tr .status-pending {
+  color: #333;
+  font-weight: 600;
+}
+.payment-history .table tbody tr .status-fail {
+  color: #e05555;
+  font-weight: 600;
+}
+
+.payment-history .table tbody tr .invoice-link a {
+  color: #068cc3;
+  font-weight: 600;
+}
+
+.page-pagination {
+  display: flex;
+  justify-content: center;
+
+  margin-top: 30px;
+}
+
+.page-pagination .page-item {
+  padding: 5px;
+  border-radius: 5px;
+}
+.page-pagination .page-item .page-link {
+  padding: 15px 20px !important;
+  border-radius: 10px;
+  border: 1px solid #068cc3;
+
+  color: #068cc3;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.page-item .page-active {
+  background-color: #068cc3;
+  color: #fff !important;
+}
+
+.page-pagination ul .disabled .page-link {
+  color: #9c9c9c !important;
+  border: 1px solid #9c9c9c;
+}
+
+/* Payment History Page End */
 
 /* Mobile Device */
 @media (min-width: 320px) and (max-width: 480px) {
@@ -1115,6 +1185,64 @@ footer {
 
   .footer-copyright {
     font-size: 12px;
+  }
+
+  .payment-history .sort-by {
+    margin: 20px 0px;
+    gap: 6px;
+  }
+
+  .sort-btn {
+    padding: 5px 10px;
+    font-size: 14px;
+  }
+
+  .payment-history table {
+    margin-top: 30px;
+  }
+
+  .payment-history .table thead tr th {
+    text-align: start;
+    vertical-align: middle;
+  }
+
+  .payment-history .table thead tr th:nth-child(2) {
+    width: 30%;
+  }
+
+  .payment-history .table thead tr th:nth-child(3) {
+    width: 30%;
+  }
+
+  .payment-history .table td {
+    text-align: start;
+    vertical-align: middle;
+
+    padding: 10px 5px;
+  }
+
+  .payment-history .table thead tr th:last-child {
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  .table tr td:last-child {
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  .payment-history .table .hide-xs {
+    display: none;
+  }
+
+  .page-pagination .page-item .page-link {
+    padding: 10px 15px !important;
+    border-radius: 5px;
+    border: 1px solid #068cc3;
+
+    color: #068cc3;
+    font-weight: 600;
+    font-size: 14px;
   }
 }
 
