@@ -252,12 +252,18 @@
   ></script>
   <script type="text/javascript">
     $(document).ready(function () {
-      const bills = document.querySelector("#bill-table");
-      parent.addEventListener("click", function (e) {
-        const tr = e.target.matches(".table-rows, .table-rows *");
-        if (tr) {
-          alert("touching the rubber");
-        }
+      const table = document.getElementById("bill-table");
+
+      const rows = table.getElementsByTagName("tr");
+
+      Array.from(rows).forEach((row, index) => {
+        row.addEventListener("click", () => {
+          if ($(row).find(":checkbox").is(":checked")) {
+            $(row).find(":checkbox").prop("checked", false);
+          } else {
+            $(row).find(":checkbox").prop("checked", true);
+          }
+        });
       });
 
       // $("#bill-table")
