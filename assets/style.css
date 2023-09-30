@@ -562,13 +562,8 @@ body {
 }
 
 .info-tagihan .table-tagihan .table thead {
-  border: 3px solid #05629f;
   color: #333;
   font-weight: 400;
-}
-
-.info-tagihan .table-tagihan .table tbody tr {
-  border: 3px solid #05629f;
 }
 
 .info-tagihan .table-tagihan .table tbody .total-row {
@@ -900,7 +895,7 @@ footer {
 }
 
 .payment-bill-title p {
-  font-size: 14px;
+  font-size: 16px;
   text-align: justify;
 }
 
@@ -964,25 +959,27 @@ footer {
   color: #fff;
   margin: 0;
 }
-
 .payment-bill .table-tagihan .table thead {
   color: #333;
   font-weight: 400;
-}
-
-.info-tagihan .table-tagihan .table tbody tr {
-  border: 3px solid #05629f;
 }
 
 .payment-bill .table-tagihan .btn-bayar {
   border: none;
 }
 
-.payment-bill .total-bill {
+.total-bill {
   margin-top: 30px;
   margin-bottom: 30px;
 }
-
+.total-bill .grand-total {
+  background-color: #05629f;
+  padding: 10px 50px;
+  border-radius: 0px 0px 10px 10px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
 .payment-bill .total-bill .grand-total {
   background-color: #05629f;
   padding: 10px 50px;
@@ -992,10 +989,17 @@ footer {
   align-items: center;
 }
 
-.payment-bill .total-bill .grand-total p {
+.total-bill .grand-total p {
   color: #fff;
   font-size: 16px;
   margin: 0px;
+}
+
+.total-bill .grand-total span {
+  font-weight: 600;
+  font-size: 22px;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 .payment-bill .total-bill .grand-total p span {
   font-weight: 600;
@@ -1036,6 +1040,53 @@ footer {
   font-size: 22px;
   margin-left: 50px;
   margin-right: 50px;
+  text-decoration: underline;
+}
+
+.payment-bill .table-tagihan tbody tr:hover {
+  cursor: pointer;
+  background-color: #eee;
+}
+
+.payment-bill .table-check input[type="checkbox"] {
+  /* Add if not using autoprefixer */
+  -webkit-appearance: none;
+  appearance: none;
+  /* For iOS < 15 to remove gradient background */
+  background-color: #fff;
+  /* Not removed via appearance */
+  margin: 0;
+  cursor: pointer;
+  color: #068cc3;
+  width: 1.75em;
+  height: 1.75em;
+  border: 1px solid #068cc3;
+  border-radius: 0.2em;
+  transform: translateY(-0.075em);
+
+  display: grid;
+  place-content: center;
+}
+.payment-bill .table-check input[type="checkbox"]::before {
+  content: "";
+  width: 0.75em;
+  height: 0.75em;
+  transform: scale(0);
+  transition: 100ms transform ease-in-out;
+  box-shadow: inset 1em 1em var(--form-control-color);
+
+  background-color: #068cc3;
+  transform-origin: bottom left;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+
+.payment-bill .table-check input[type="checkbox"]:focus {
+  outline: max(2px, 0.15em) solid #05629f;
+  outline-offset: max(2px, 0.15em);
+}
+
+.payment-bill .table-check input[type="checkbox"]:checked::before {
+  transform: scale(1);
 }
 
 /* Payment Bill Page Style End */
@@ -1263,6 +1314,20 @@ footer {
     vertical-align: middle;
   }
 
+  .total-bill .grand-total {
+    padding: 10px;
+    justify-content: center;
+  }
+
+  .total-bill .grand-total p {
+    font-size: 14px;
+  }
+
+  .total-bill .grand-total span {
+    margin: 0;
+    font-size: 16px;
+  }
+
   .footer-layout {
     gap: 20px;
     flex-direction: column;
@@ -1348,6 +1413,7 @@ footer {
     font-size: 14px;
   }
 
+  /* Tagihan Page */
   .payment-history table {
     margin-top: 30px;
   }
@@ -1378,7 +1444,7 @@ footer {
   }
 
   .table tr td:last-child {
-    text-align: center;
+    text-align: start;
     vertical-align: middle;
   }
 
@@ -1396,7 +1462,90 @@ footer {
     font-size: 14px;
   }
 
-  /* Tagihan Page */
+  .payment-bill .payment-bill-title {
+    width: 100%;
+  }
+
+  .payment-bill .payment-bill-title h3 {
+    font-size: 1.5em;
+  }
+
+  .payment-bill .payment-bill-title p {
+    font-size: 14px;
+  }
+
+  .payment-bill .table-tagihan {
+    margin-top: 30px !important;
+  }
+
+  .payment-bill .table-tagihan .table-title i {
+    font-size: 16px;
+    line-height: 0.8;
+  }
+
+  .payment-bill .table-tagihan .table-title p {
+    font-size: 14px;
+  }
+
+  .payment-bill .table-tagihan .table td,
+  .table th {
+    font-size: 12px;
+  }
+
+  .payment-bill .table-tagihan .table thead th {
+    vertical-align: middle;
+  }
+
+  .payment-bill .table-tagihan .table tbody td,
+  th {
+    vertical-align: middle;
+    padding: 5px;
+  }
+
+  .payment-bill .table-tagihan .table thead th:first-child {
+    display: none;
+  }
+
+  .payment-bill .table-tagihan .table tbody th {
+    display: none;
+  }
+  .payment-bill .total-bill .grand-total {
+    padding: 10px;
+    justify-content: center;
+  }
+
+  .payment-bill .total-bill .grand-total p {
+    font-size: 14px;
+  }
+  .payment-bill .total-bill .grand-total p span {
+    font-size: 14px;
+    margin: 0;
+  }
+  .payment-bill .total-bill .sub-total {
+    padding: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .payment-bill .total-bill .sub-total .selected-capt {
+    font-size: 12px;
+  }
+  .payment-bill .total-bill .sub-total .selected-capt span {
+    font-size: 12px;
+  }
+  .payment-bill .total-bill .sub-total p {
+    font-size: 14px;
+  }
+
+  .payment-bill .total-bill .sub-total p span {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0;
+    text-decoration: underline;
+  }
+  .payment-bill .table-caption {
+    text-align: justify;
+  }
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
@@ -1479,6 +1628,77 @@ footer {
   .footer-phone span {
     font-size: 14px;
   }
+
+  .payment-bill-title {
+    width: 100%;
+  }
+
+  .payment-bill .table-tagihan {
+    margin-top: 30px !important;
+  }
+
+  .payment-bill .table-tagihan thead th {
+    vertical-align: middle;
+  }
+
+  .payment-bill .table-tagihan tbody th,
+  td {
+    vertical-align: middle !important;
+  }
+
+  .payment-bill .table-tagihan thead th:first-child {
+    display: none;
+  }
+
+  .payment-bill .table-tagihan tbody th:first-child {
+    display: none;
+  }
+
+  .payment-bill .total-bill .grand-total {
+    padding: 10px;
+    justify-content: center;
+  }
+
+  .payment-bill .total-bill .grand-total p {
+    font-size: 16px;
+  }
+
+  .payment-bill .total-bill .grand-total p span {
+    margin: 0px;
+    font-size: 18px;
+  }
+
+  .payment-bill .total-bill .sub-total {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .payment-bill .total-bill .sub-total .selected-capt {
+    font-size: 16px;
+  }
+
+  .payment-bill .total-bill .sub-total .selected-capt span {
+    font-size: 16px;
+  }
+
+  .payment-bill .total-bill .sub-total p {
+    font-size: 16px;
+  }
+
+  .payment-bill .total-bill .sub-total p span {
+    margin: 0;
+    font-size: 18px;
+  }
+  .payment-bill .table-caption {
+    text-align: justify;
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+  .table-caption .btn-bayar {
+    padding: 10px;
+    width: 85vw;
+    font-size: 16px;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -1513,5 +1733,75 @@ footer {
 
   .footer-address {
     padding: 30px 10px;
+  }
+  .payment-bill-title {
+    width: 100%;
+  }
+
+  .payment-bill .table-tagihan {
+    margin-top: 30px !important;
+  }
+
+  .payment-bill .table-tagihan thead th {
+    vertical-align: middle;
+  }
+
+  .payment-bill .table-tagihan tbody th,
+  td {
+    vertical-align: middle !important;
+  }
+
+  .payment-bill .table-tagihan thead th:first-child {
+    display: none;
+  }
+
+  .payment-bill .table-tagihan tbody th:first-child {
+    display: none;
+  }
+
+  .payment-bill .total-bill .grand-total {
+    padding: 10px;
+    justify-content: center;
+  }
+
+  .payment-bill .total-bill .grand-total p {
+    font-size: 16px;
+  }
+
+  .payment-bill .total-bill .grand-total p span {
+    margin: 0px;
+    font-size: 18px;
+  }
+
+  .payment-bill .total-bill .sub-total {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .payment-bill .total-bill .sub-total .selected-capt {
+    font-size: 16px;
+  }
+
+  .payment-bill .total-bill .sub-total .selected-capt span {
+    font-size: 16px;
+  }
+
+  .payment-bill .total-bill .sub-total p {
+    font-size: 16px;
+  }
+
+  .payment-bill .total-bill .sub-total p span {
+    margin: 0;
+    font-size: 18px;
+  }
+  .payment-bill .table-caption {
+    text-align: justify;
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+  .table-caption .btn-bayar {
+    padding: 10px;
+    width: 630px;
+    font-size: 16px;
   }
 }
