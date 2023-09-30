@@ -890,12 +890,6 @@ footer {
 
 /* Payment Bill Page Style */
 
-.payment-bill {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 .payment-bill-title {
   width: 70%;
 }
@@ -906,7 +900,7 @@ footer {
 }
 
 .payment-bill-title p {
-  font-size: 16px;
+  font-size: 14px;
   text-align: justify;
 }
 
@@ -915,7 +909,6 @@ footer {
 }
 
 .payment-history-btn {
-  border: 1px solid #068cc3;
   background-color: #068cc3;
   border-radius: 10px;
   padding: 10px;
@@ -947,6 +940,104 @@ footer {
 .payment-history-btn:hover span {
   color: #fff;
 }
+
+.payment-bill .table-tagihan .table-title {
+  border-radius: 10px 10px 0px 0px;
+  background-color: #05629f;
+  padding: 10px 20px;
+
+  display: flex;
+  gap: 10px;
+}
+
+.payment-bill .table-tagihan .table-title i {
+  font-size: 18px;
+  line-height: 1.2;
+
+  color: #fff;
+}
+
+.payment-bill .table-tagihan .table-title p {
+  font-size: 18px;
+
+  font-weight: 400;
+  color: #fff;
+  margin: 0;
+}
+
+.payment-bill .table-tagihan .table thead {
+  color: #333;
+  font-weight: 400;
+}
+
+.info-tagihan .table-tagihan .table tbody tr {
+  border: 3px solid #05629f;
+}
+
+.payment-bill .table-tagihan .btn-bayar {
+  border: none;
+}
+
+.payment-bill .total-bill {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.payment-bill .total-bill .grand-total {
+  background-color: #05629f;
+  padding: 10px 50px;
+  border-radius: 10px 10px 0px 0px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.payment-bill .total-bill .grand-total p {
+  color: #fff;
+  font-size: 16px;
+  margin: 0px;
+}
+.payment-bill .total-bill .grand-total p span {
+  font-weight: 600;
+  font-size: 22px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.payment-bill .sub-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #068cc3;
+  border-radius: 0px 0px 10px 10px;
+  padding: 10px 50px;
+}
+
+.payment-bill .sub-total .selected-capt {
+  font-size: 16px;
+  font-weight: 600;
+  color: #3c3c3c;
+}
+
+.payment-bill .sub-total .selected-capt span {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.payment-bill .sub-total p {
+  margin: 0px;
+  font-size: 16px;
+  color: #068cc3;
+  font-weight: 600;
+}
+
+.payment-bill .sub-total p span {
+  font-weight: 600;
+  font-size: 22px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
 /* Payment Bill Page Style End */
 /* Mobile Device */
 @media (min-width: 320px) and (max-width: 480px) {
