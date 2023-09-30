@@ -963,6 +963,9 @@ footer {
   color: #333;
   font-weight: 400;
 }
+.table-tagihan .table thead th {
+  vertical-align: middle !important;
+}
 
 .payment-bill .table-tagihan .btn-bayar {
   border: none;
@@ -1467,7 +1470,7 @@ footer {
   }
 
   .payment-bill .payment-bill-title h3 {
-    font-size: 1.5em;
+    font-size: 1.75em;
   }
 
   .payment-bill .payment-bill-title p {
@@ -1545,6 +1548,15 @@ footer {
   }
   .payment-bill .table-caption {
     text-align: justify;
+  }
+
+  .payment-bill .table-caption .btn-bayar {
+    font-size: 14px;
+    gap: 10px;
+  }
+
+  .payment-bill .table-caption .btn-bayar:active {
+    border: none !important;
   }
 }
 
