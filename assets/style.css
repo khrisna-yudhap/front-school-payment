@@ -86,6 +86,14 @@ body {
   align-items: center;
 }
 
+.badge {
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.badge-primary {
+  background-color: #05629f !important;
+}
 .bg-login-blue {
   width: 400px;
   height: 450px;
@@ -1092,9 +1100,28 @@ footer {
   transform: scale(1);
 }
 
+.payment-bill .form-select {
+  width: 100%;
+  padding: 7px;
+
+  border-radius: 8px;
+  border: 2px solid #068cc3;
+
+  color: #333;
+  font-weight: 500;
+  font-size: 16px;
+}
+
 /* Payment Bill Page Style End */
 /* Mobile Device */
 @media (min-width: 320px) and (max-width: 480px) {
+  .payment-bill .form-select {
+    font-size: 14px;
+  }
+  .badge {
+    padding: 7px;
+    border-radius: 5px;
+  }
   .login-body {
     flex-direction: column;
     min-height: 100vh;
