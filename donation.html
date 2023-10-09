@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Tagihan Pembayaran - Your Institute</title>
+    <title>Riwayat Pembayaran - Your Institute</title>
 
     <link
       rel="stylesheet"
@@ -50,7 +50,7 @@
 
               <li class="nav-item dropdown">
                 <a
-                  class="nav-link dropdown-toggle menu-active"
+                  class="nav-link dropdown-toggle"
                   href="#"
                   id="navbarDropdown"
                   role="button"
@@ -73,7 +73,9 @@
                 </div>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="donation.html">Sumbangan</a>
+                <a class="nav-link menu-active" href="donation.html"
+                  >Sumbangan</a
+                >
               </li>
               <li class="nav-item">
                 <a href="profile-page.html" class="profile-menu">
@@ -90,100 +92,60 @@
 
       <!-- Content Section -->
       <section class="content">
-        <div class="payment-bill">
-          <div class="payment-bill-title">
-            <h3>Tagihan Pembayaran</h3>
-            <p class="">
-              Berikut ini merupakan tagihan pembayaran anda yang perlu
-              dibayarkan sesuai dengan nominal dan sebelum batas tanggal yang
-              tertera. Informasi Pembayaran
-              <a href="petunjuk-pembayaran.html">Klik Disini</a>
+        <div class="donation-page">
+          <div class="donation-title">
+            <h3>Sumbangan Wali Murid</h3>
+            <p>
+              Terima kasih atas kesediaan bapak / ibu wali murid untuk
+              memberikan sumbangan, demi kemajuan pendidikan yang ada disekolah.
             </p>
           </div>
+          <div class="donation-form">
+            <div class="form-header">Form Sumbangan Wali</div>
 
-          <select class="form-select">
-            <option value="1">Semester Ganjil T.A 22/23</option>
-            <option value="2">Semester Ganjil T.A 21/22</option>
-            <option value="3">Semester Ganjil T.A 20/21</option>
-          </select>
-
-          <div class="table-tagihan mt-3">
-            <div class="table-title">
-              <i class="bi bi-wallet-fill"></i>
-              <p>Informasi Pembayaran</p>
-            </div>
-            <form action="#" method="submit">
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th scope="col">#</th>
-                    <th scope="col" style="width: 50px">Pilih</th>
-                    <th scope="col" style="width: 25em">Jenis Pembayaran</th>
-                    <th scope="col">Nominal Tagihan</th>
-                    <th scope="col">Status Tagihan</th>
-                  </tr>
-                </thead>
-
-                <tbody id="bill-table">
-                  <tr class="table-rows">
-                    <th scope="row">1</th>
-                    <td class="table-check">
-                      <input id="bill-check" type="checkbox" checked />
-                    </td>
-                    <td>Biaya Daftar Ulang Sem. Ganjil T.A 22/23</td>
-                    <td>Rp 2.700.000.,</td>
-                    <td>
-                      <span class="badge badge-secondary">Belum Lunas</span>
-                    </td>
-                  </tr>
-                  <tr class="table-rows">
-                    <th scope="row">2</th>
-                    <td class="table-check">
-                      <input id="bill-check" type="checkbox" />
-                    </td>
-                    <td>SPP Semester Ganjil T.A 22/23</td>
-                    <td>Rp 1.700.000.,</td>
-                    <td>
-                      <span class="badge badge-secondary">Belum Lunas</span>
-                    </td>
-                  </tr>
-                  <tr class="table-rows">
-                    <th scope="row">3</th>
-                    <td class="table-check">
-                      <input id="bill-check" type="checkbox" />
-                    </td>
-                    <td>SPP Semester Genap T.A 22/23</td>
-                    <td>Rp 1.700.000.,</td>
-                    <td>
-                      <span class="badge badge-secondary">Belum Lunas</span>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-              <div class="total-bill">
-                <div class="grand-total">
-                  <p>Total Tagihan Saat Ini : <span>Rp 6.100.000</span></p>
-                </div>
-                <div class="sub-total">
-                  <div class="selected-capt">
-                    1 dari 3 <span> pembayaran terpilih</span>
+            <form action="#">
+              <div class="form-layout">
+                <div class="form-group">
+                  <div>
+                    <label for="donation-name">Keperluan Sumbangan :</label>
+                    <input
+                      class="form-input"
+                      type="text"
+                      placeholder="Sumbangan Pembelian Kertas HVS Kelas IX A"
+                    />
                   </div>
-                  <p>Total Yang Perlu Dibayar : <span>Rp 2.700.000</span></p>
+
+                  <div class="mt-3">
+                    <label for="donation-nominal">Nominal Sumbangan :</label>
+                    <input
+                      class="form-input"
+                      type="text"
+                      placeholder="Rp 1.000.000"
+                    />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="exampleFormControlTextarea1"
+                    >Keterangan Tambahan :</label
+                  >
+                  <textarea
+                    class="form-control"
+                    id="exampleFormControlTextarea1"
+                    rows="3"
+                    placeholder="Keterangan tambahan..."
+                  ></textarea>
                 </div>
               </div>
-              <div class="table-caption">
-                <div>
-                  <p>
-                    <b>INFORMASI :</b> Pembayaran dapat dilakukan secara
-                    terpisah, sesuai dengan prosedur. Klik “Bayar Sekarang”
-                    untuk memulai proses pembayaran.
-                  </p>
-                </div>
-                <div>
-                  <button type="submit" class="btn-bayar">
-                    <i class="bi bi-wallet-fill"></i> Bayar Tagihan
-                  </button>
-                </div>
+              <div class="form-submit">
+                <span
+                  >*pastikan nominal, keperluan dan keterangan dari sumbangan
+                  yang diberikan jelas dan benar.</span
+                >
+
+                <button type="submit" class="submit-button">
+                  Kirim Sumbangan
+                </button>
               </div>
             </form>
           </div>
@@ -261,35 +223,6 @@
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"
   ></script>
-  <script type="text/javascript">
-    $(document).ready(function () {
-      const table = document.getElementById("bill-table");
-
-      const rows = table.getElementsByTagName("tr");
-
-      var checkBox = $(".table-rows input:checkbox");
-
-      Array.from(rows).forEach((row, index) => {
-        row.addEventListener("click", () => {
-          if ($(row).find(":checkbox").is(":checked")) {
-            $(row).find(":checkbox").prop("checked", false);
-          } else {
-            $(row).find(":checkbox").prop("checked", true);
-          }
-        });
-      });
-
-      Array.from(checkBox).forEach((row, index) => {
-        row.addEventListener("click", () => {
-          if ($(row).is(":checked")) {
-            $(row).prop("checked", false);
-          } else {
-            $(row).prop("checked", true);
-          }
-        });
-      });
-    });
-  </script>
   <script
     src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
     integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"

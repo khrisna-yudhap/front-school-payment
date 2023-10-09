@@ -402,6 +402,13 @@ body {
   font-size: 15px;
   color: #e05555;
 }
+
+.notification .dropleft .dropdown-menu h3 {
+  padding: 10px;
+  font-size: 20px;
+  color: #068cc3;
+  font-weight: 600;
+}
 .notif-message .message {
   width: 90%;
 }
@@ -412,10 +419,11 @@ body {
   color: #333;
 }
 
-.notification .dropleft .dropdown-menu .notif-message p small {
+.notification .dropleft .dropdown-menu .notif-message small {
   text-decoration: none;
-  font-size: 12px;
+  font-size: 14px;
   margin-top: 0;
+  color: #068cc3 !important;
 }
 
 .notification .dropleft .dropdown-menu .btn-pad {
@@ -1112,6 +1120,134 @@ footer {
   font-size: 16px;
 }
 
+.invoice-page .invoice-title-lay {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.invoice-page .invoice-title-lay .print-invoice .btn-cetak {
+  padding: 10px 20px;
+  color: #fff;
+  border-radius: 10px;
+  background-color: #068cc3;
+
+  font-size: 18px;
+  justify-content: center;
+}
+.invoice-page .invoice-title-lay .print-invoice .btn-cetak:hover {
+  text-decoration: none;
+  background-color: #05629f;
+}
+
+.profile-page .profile-title-lay {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profile-page h3 {
+  font-weight: 600;
+}
+
+.profile-page .student-profile .student-data {
+  border-radius: 10px;
+}
+
+.profile-page .btn-logout a {
+  border-radius: 10px;
+  padding: 10px 15px;
+  background-color: #e05555;
+  color: #fff;
+}
+.profile-page .btn-logout a:hover {
+  text-decoration: none;
+  background-color: #c54b4b;
+}
+
+.donation-page .donation-title h3 {
+  font-weight: 600;
+  color: #068cc3;
+}
+
+.donation-page .donation-title p {
+  color: #333;
+}
+
+.donation-form {
+  -webkit-box-shadow: 0px 3px 10px -1px rgba(204, 204, 204, 1);
+  -moz-box-shadow: 0px 3px 10px -1px rgba(204, 204, 204, 1);
+  box-shadow: 0px 3px 10px -1px rgba(204, 204, 204, 1);
+  padding-bottom: 20px;
+  border-radius: 0px 0px 10px 10px;
+}
+
+.donation-form .form-header {
+  background-color: #068cc3;
+  padding: 15px 30px;
+  margin-top: 30px;
+  border-radius: 10px 10px 0px 0px;
+
+  color: #fff;
+  font-size: 20px;
+}
+
+.donation-form form .form-layout {
+  padding: 15px 30px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.donation-form form .form-layout .form-group {
+  width: 50%;
+}
+
+.donation-form form .form-layout .form-group label {
+  margin: 10px 0px;
+  font-weight: 700;
+  color: #333;
+}
+
+.donation-form form .form-layout .form-group input {
+  margin-top: 0;
+}
+.donation-form form .form-layout .form-group input:focus {
+  outline: none;
+}
+
+.donation-form form .form-layout .form-group textarea {
+  height: 80%;
+  border-radius: 10px;
+  border: 1px solid #068cc3;
+}
+
+.donation-form .form-submit {
+  display: flex;
+
+  padding: 15px 30px;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.donation-form .form-submit span {
+  width: 45%;
+  text-align: justify;
+}
+
+.donation-form .form-submit .submit-button {
+  width: 50%;
+  border-radius: 10px;
+  background-color: #068cc3;
+  border: none;
+  outline: none;
+  color: #fff;
+}
+
+.donation-form .form-submit .submit-button:hover {
+  background-color: #05629f;
+}
+
 /* Payment Bill Page Style End */
 /* Mobile Device */
 @media (min-width: 320px) and (max-width: 480px) {
@@ -1585,6 +1721,52 @@ footer {
   .payment-bill .table-caption .btn-bayar:active {
     border: none !important;
   }
+
+  .donation-form {
+    padding-bottom: 30px;
+  }
+  .donation-form .form-header {
+    font-size: 18px;
+  }
+  .donation-form form .form-layout {
+    flex-direction: column;
+  }
+
+  .donation-page .donation-title h3 {
+    font-size: 26px;
+  }
+  .donation-page .donation-title p {
+    text-align: justify;
+    font-size: 14px;
+  }
+  .donation-form form .form-layout .form-group {
+    width: 100%;
+  }
+
+  .donation-form form .form-layout .form-group input {
+    width: 100%;
+  }
+  .donation-form form .form-layout .form-group input::placeholder {
+    font-size: 14px;
+  }
+
+  .donation-form .form-submit {
+    flex-direction: column;
+    gap: 20px;
+    padding: 0px 30px;
+  }
+
+  .donation-form .form-submit span {
+    width: 100%;
+    text-align: justify;
+  }
+
+  .donation-form .form-submit .submit-button {
+    width: 100%;
+    padding: 10px;
+
+    align-self: center;
+  }
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
@@ -1842,5 +2024,12 @@ footer {
     padding: 10px;
     width: 630px;
     font-size: 16px;
+  }
+
+  .donation-form .form-submit .submit-button {
+    width: 50%;
+    padding: 10px;
+
+    align-self: center;
   }
 }
