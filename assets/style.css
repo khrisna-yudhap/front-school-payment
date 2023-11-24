@@ -81,7 +81,7 @@ body {
 }
 
 .page-wrapper {
-  width: 80%;
+  width: 90%;
 }
 .login-body {
   height: 100%;
@@ -236,10 +236,6 @@ body {
   background-color: #068cc3;
 }
 
-.navbar {
-  margin-top: 30px;
-}
-
 .navbar .school-logo {
   max-width: 250px;
 }
@@ -258,17 +254,15 @@ body {
 }
 
 .profile-menu {
-  background-color: #068cc3;
-  border-radius: 10px;
-  padding: 10px;
-}
-
-.profile-menu {
   color: #fff !important;
   display: flex;
   align-items: center;
   justify-content: start;
   gap: 10px;
+
+  background-color: #068cc3;
+  border-radius: 10px;
+  padding: 5px 10px;
 }
 .profile-menu:hover {
   text-decoration: none;
@@ -807,6 +801,7 @@ body {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .sort-btn {
@@ -819,10 +814,55 @@ body {
   font-weight: 500;
 }
 
-.sort-active {
+.sort-btn:hover {
   border: 1px solid #068cc3;
 }
 
+.sort-active {
+  background-color: #068cc3;
+  color: #fff;
+  border: 1px solid #068cc3;
+}
+
+.payment-history .sort-by .filter {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+
+  width: 50%;
+}
+
+.payment-history .sort-by .filter .date-lay {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 70%;
+}
+.payment-history .sort-by .filter .date-lay .form-control {
+  width: 70%;
+}
+.payment-history .sort-by .filter .search-lay {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 6px;
+  width: 60%;
+}
+.payment-history .sort-by .filter .search-lay .form-control {
+  width: 60%;
+}
+
+.payment-history .sort-by .filter .form-control {
+  border-radius: 10px;
+  padding: 1.4em !important;
+}
+
+.payment-history .sort-by .filter .btn-cari {
+  background-color: #068cc3;
+  color: #fff;
+  border-radius: 10px;
+  padding: 10px 20px;
+}
 /* Table Style */
 .payment-history table {
   margin-top: 50px;
@@ -1119,25 +1159,99 @@ body {
   font-size: 16px;
 }
 
-.invoice-page .invoice-title-lay {
+.invoice-page {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center;
 }
 
 .invoice-page .invoice-title-lay .print-invoice .btn-cetak {
   padding: 10px 20px;
   color: #fff;
-  border-radius: 10px;
-  background-color: #068cc3;
 
-  font-size: 18px;
+  background-color: #068cc3;
+  border-radius: 10px;
+  font-size: 16px;
   justify-content: center;
+}
+
+.invoice-page .invoice-title-lay .print-invoice .btn-cetak i {
+  line-height: 0;
+}
+[class^="bi-"]::before,
+[class*=" bi-"]::before {
+  line-height: 1.4285714286;
 }
 .invoice-page .invoice-title-lay .print-invoice .btn-cetak:hover {
   text-decoration: none;
   background-color: #05629f;
+}
+
+.invoice-page .card {
+  border-radius: 15px;
+}
+
+.invoice-page .card .invoice-card-title {
+  padding: 1em;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.invoice-title-lay {
+  padding: 0 1em;
+}
+
+.invoice-page .card .total-payment {
+  border-radius: 10px;
+  color: #068cc3;
+  padding: 0 1.5em;
+}
+
+.invoice-page .card .invoice-title {
+  font-size: 32px;
+  font-weight: bold;
+  color: #333;
+}
+
+.invoice-page .card .invoice-card-details {
+  padding: 1em;
+  color: #333;
+}
+
+.invoice-page .card .invoice-card-table {
+  padding: 1em;
+}
+
+.invoice-page .invoice-card-table .table {
+  text-align: center;
+}
+
+.invoice-page .card .total-price-card {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 1em;
+}
+
+.invoice-page .card .invoice-total {
+  color: #068cc3;
+
+  padding: 1em;
+}
+
+.invoice-page .card .btn-bayar {
+  padding: 10px 20px;
+  color: #fff;
+  border-radius: 10px;
+  background-color: #068cc3;
+
+  font-size: 16px;
+  border: 0;
+}
+
+.invoice-page .card .btn-bayar:hover {
+  background-color: #05578d;
 }
 
 .profile-page .profile-title-lay {
@@ -1684,12 +1798,57 @@ body {
 
   .payment-history .sort-by {
     margin: 20px 0px;
-    gap: 6px;
+    gap: 16px;
+    flex-wrap: wrap-reverse;
   }
 
+  .payment-history .sort-by .sort {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
   .sort-btn {
     padding: 5px 10px;
     font-size: 14px;
+  }
+
+  .payment-history .sort-by .filter {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    width: 100%;
+  }
+  .payment-history .sort-by .filter .date-lay {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    width: 40%;
+  }
+
+  .payment-history .sort-by .filter .date-lay .form-control {
+    width: 100%;
+    font-size: 12px;
+    padding: 10px !important;
+  }
+
+  .payment-history .sort-by .filter .search-lay {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 6px;
+    width: 90%;
+  }
+  .payment-history .sort-by .filter .search-lay .form-control {
+    width: 60%;
+    font-size: 12px;
+    padding: 10px !important;
+  }
+  .payment-history .sort-by .filter .btn-cari {
+    background-color: #068cc3;
+    color: #fff;
+    border-radius: 10px;
+    padding: 7px;
+    font-size: 12px;
   }
 
   /* Tagihan Page */
@@ -1887,6 +2046,65 @@ body {
   .form-selectgroup-label {
     width: 115px;
   }
+
+  .invoice-page .card .invoice-card-title .invoice-title {
+    font-size: 24px;
+  }
+
+  .invoice-page .card .invoice-card-title p {
+    font-size: 12px;
+  }
+
+  .invoice-page .card .invoice-card-title {
+    padding: 0;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .invoice-title-lay {
+    padding: 0 1em;
+    width: 100%;
+  }
+
+  .invoice-page .invoice-title-lay .print-invoice .btn-cetak {
+    font-size: 12px;
+    padding: 10px;
+  }
+  .invoice-page .card .invoice-card-details {
+    padding: 0;
+  }
+  .invoice-page .card .invoice-card-details p {
+    font-size: 14px;
+  }
+  .invoice-page .invoice-card-table {
+    padding: 0;
+  }
+
+  .invoice-page .invoice-card-table .col-md-12 {
+    padding: 0;
+  }
+  .invoice-page .invoice-card-table .table {
+    text-align: start;
+  }
+  .invoice-page .card .total-price-card {
+    justify-content: center;
+
+    gap: 16px;
+    padding: 0;
+  }
+  .invoice-page .card .btn-lay {
+    width: 100%;
+  }
+  .invoice-page .card .btn-bayar {
+    width: 100%;
+  }
+
+  .invoice-page .card .invoice-total {
+    padding: 0;
+  }
+
+  .invoice-page .card .invoice-total .h2 {
+    font-size: 24px !important;
+  }
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
@@ -2039,6 +2257,62 @@ body {
     flex-wrap: nowrap;
     flex-direction: column;
   }
+
+  .payment-history .sort-by {
+    margin: 20px 0px;
+    gap: 16px;
+    flex-wrap: wrap-reverse;
+  }
+
+  .payment-history .sort-by .sort {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .sort-btn {
+    padding: 5px 10px;
+    font-size: 14px;
+  }
+
+  .payment-history .sort-by .filter {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    width: 100%;
+  }
+  .payment-history .sort-by .filter .date-lay {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    width: 40%;
+  }
+
+  .payment-history .sort-by .filter .date-lay .form-control {
+    width: 100%;
+    font-size: 14px;
+    padding: 10px !important;
+  }
+
+  .payment-history .sort-by .filter .search-lay {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 6px;
+    width: 90%;
+  }
+  .payment-history .sort-by .filter .search-lay .form-control {
+    width: 60%;
+    font-size: 14px;
+    padding: 10px !important;
+  }
+  .payment-history .sort-by .filter .btn-cari {
+    background-color: #068cc3;
+    color: #fff;
+    border-radius: 10px;
+    padding: 7px;
+    font-size: 14px;
+  }
+
   .table-caption .btn-bayar {
     padding: 10px;
     width: 85vw;
@@ -2083,6 +2357,19 @@ body {
     padding: 10px 20px;
     width: 100%;
   }
+
+  .invoice-page .card .total-price-card {
+    justify-content: center;
+
+    gap: 16px;
+    padding: 0;
+  }
+  .invoice-page .card .btn-lay {
+    width: 100%;
+  }
+  .invoice-page .card .btn-bayar {
+    width: 100%;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -2108,6 +2395,15 @@ body {
   .table-caption {
     gap: 0px;
     flex-wrap: wrap;
+  }
+
+  .table-caption .btn-lay {
+    width: 100%;
+  }
+  .table-caption .btn-bayar {
+    padding: 10px;
+    width: 100%;
+    font-size: 16px;
   }
 
   .footer-layout {
@@ -2187,10 +2483,60 @@ body {
     flex-wrap: nowrap;
     flex-direction: column;
   }
-  .table-caption .btn-bayar {
-    padding: 10px;
-    width: 630px;
-    font-size: 16px;
+
+  .payment-history .sort-by {
+    margin: 20px 0px;
+    gap: 16px;
+    flex-wrap: wrap-reverse;
+  }
+
+  .payment-history .sort-by .sort {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+  .sort-btn {
+    padding: 5px 10px;
+    font-size: 14px;
+  }
+
+  .payment-history .sort-by .filter {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    width: 100%;
+  }
+  .payment-history .sort-by .filter .date-lay {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    width: 40%;
+  }
+
+  .payment-history .sort-by .filter .date-lay .form-control {
+    width: 100%;
+    font-size: 14px;
+    padding: 15px !important;
+  }
+
+  .payment-history .sort-by .filter .search-lay {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 6px;
+    width: 90%;
+  }
+  .payment-history .sort-by .filter .search-lay .form-control {
+    width: 60%;
+    font-size: 14px;
+    padding: 15px !important;
+  }
+  .payment-history .sort-by .filter .btn-cari {
+    background-color: #068cc3;
+    color: #fff;
+    border-radius: 10px;
+    padding: 7px 20px;
+    font-size: 14px;
   }
 
   .donation-form .form-submit .submit-button {

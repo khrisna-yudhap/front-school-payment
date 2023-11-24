@@ -22,7 +22,7 @@
         <nav
           class="navbar navbar-expand-lg navbar-light bg-light navbar-fixed-top"
         >
-          <a class="navbar-brand" href="index.html">
+          <a class="navbar-brand" href="#">
             <img
               src="assets/images/logo.png"
               alt="Institute Logo"
@@ -45,12 +45,12 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-                <a class="nav-link" href="index.html">Beranda</a>
+                <a class="nav-link menu-active" href="index.html">Beranda</a>
               </li>
 
               <li class="nav-item dropdown">
                 <a
-                  class="nav-link dropdown-toggle menu-active"
+                  class="nav-link dropdown-toggle"
                   href="#"
                   id="navbarDropdown"
                   role="button"
@@ -75,11 +75,36 @@
               <li class="nav-item">
                 <a class="nav-link" href="donation.html">Sumbangan</a>
               </li>
-              <li class="nav-item">
-                <a href="profile-page.html" class="profile-menu">
+              <li class="nav-item dropdown">
+                <a
+                  href="#"
+                  class="profile-menu dropdown-toggle"
+                  id="dropdownProfile"
+                  data-toggle="dropdown"
+                  data-offset="10,20"
+                  role="button"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
                   <i class="bi bi-person-lines-fill"></i>
                   <span>&nbsp;Profil Siswa</span>
                 </a>
+                <div
+                  class="dropdown-menu dropdown-menu-end"
+                  aria-labelledby="dropdownProfile"
+                  style="min-width: 295px"
+                >
+                  <span class="dropdown-header">Menu Profil Siswa</span>
+                  <a class="dropdown-item" href="profile-page.html">
+                    <i class="bi bi-person-circle"></i>
+                    <span>&nbsp;Profil Saya</span></a
+                  >
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#logout">
+                    <i class="bi bi-box-arrow-right"></i>
+                    <span>&nbsp;Log Out</span>
+                  </a>
+                </div>
               </li>
             </ul>
           </div>
@@ -92,10 +117,35 @@
         <div class="payment-history">
           <h3>Riwayat Pembayaran</h3>
           <div class="sort-by">
-            <button class="sort-btn sort-active">Semua</button>
-            <button class="sort-btn">Berhasil</button>
-            <button class="sort-btn">Pending</button>
-            <button class="sort-btn">Gagal</button>
+            <div class="sort">
+              <button class="sort-btn sort-active">Semua</button>
+              <button class="sort-btn">Berhasil</button>
+              <button class="sort-btn">Pending</button>
+              <button class="sort-btn">Gagal</button>
+            </div>
+            <div class="filter">
+              <div class="date-lay">
+                <input
+                  class="form-control"
+                  placeholder="Select a date"
+                  type="date"
+                  value="2020-06-20"
+                />
+              </div>
+
+              <div class="search-lay">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Cari riwayat.."
+                />
+                <div class="btn-lay">
+                  <a href="#" class="btn btn-cari" aria-label="Button"
+                    ><i class="bi bi-search"></i>&nbsp;Cari
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
 
           <table class="table table-hover">

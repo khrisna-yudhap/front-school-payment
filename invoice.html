@@ -22,7 +22,7 @@
         <nav
           class="navbar navbar-expand-lg navbar-light bg-light navbar-fixed-top"
         >
-          <a class="navbar-brand" href="index.html">
+          <a class="navbar-brand" href="#">
             <img
               src="assets/images/logo.png"
               alt="Institute Logo"
@@ -45,7 +45,7 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-                <a class="nav-link" href="index.html">Beranda</a>
+                <a class="nav-link menu-active" href="index.html">Beranda</a>
               </li>
 
               <li class="nav-item dropdown">
@@ -75,11 +75,36 @@
               <li class="nav-item">
                 <a class="nav-link" href="donation.html">Sumbangan</a>
               </li>
-              <li class="nav-item">
-                <a href="profile-page.html" class="profile-menu">
+              <li class="nav-item dropdown">
+                <a
+                  href="#"
+                  class="profile-menu dropdown-toggle"
+                  id="dropdownProfile"
+                  data-toggle="dropdown"
+                  data-offset="10,20"
+                  role="button"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
                   <i class="bi bi-person-lines-fill"></i>
                   <span>&nbsp;Profil Siswa</span>
                 </a>
+                <div
+                  class="dropdown-menu dropdown-menu-end"
+                  aria-labelledby="dropdownProfile"
+                  style="min-width: 295px"
+                >
+                  <span class="dropdown-header">Menu Profil Siswa</span>
+                  <a class="dropdown-item" href="profile-page.html">
+                    <i class="bi bi-person-circle"></i>
+                    <span>&nbsp;Profil Saya</span></a
+                  >
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#logout">
+                    <i class="bi bi-box-arrow-right"></i>
+                    <span>&nbsp;Log Out</span>
+                  </a>
+                </div>
               </li>
             </ul>
           </div>
@@ -91,23 +116,100 @@
       <!-- Content Section -->
       <section class="content">
         <div class="invoice-page">
-          <div class="invoice-title-lay">
-            <div class="invoice-title">
-              <h3>Invoice #12312</h3>
-              <p>
-                Berikut ini merupakan invoice atau bukti transaksi pembayaran
-                yang telah anda lakukan.
-              </p>
-            </div>
-            <div class="print-invoice">
-              <a class="btn-cetak" href="#">Cetak Invoice</a>
+          <div class="card mt-3 col-lg-8">
+            <div class="card-body">
+              <div class="row invoice-card-title">
+                <div class="col-md-6">
+                  <p class="mb-2 invoice-title">Invoice #AL13191</p>
+                  <p class="mb-1 text-muted">
+                    Tanggal Pembayaran <br />
+                    <span>4 November 2023</span>
+                  </p>
+                </div>
+                <div class="invoice-title-lay mt-3">
+                  <div class="print-invoice">
+                    <a class="btn-cetak" href="#"
+                      ><i class="bi bi-printer"></i>
+                      &nbsp; Print Invoice
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <hr class="mx-3" />
+
+              <div class="row invoice-card-details">
+                <div class="col-md-6">
+                  <p class="font-weight-bold">Detail Pembayaran Siswa</p>
+                  <p class="mb-1 text-muted">Kepada : Suhendra Setiawan</p>
+
+                  <p class="mb-1 text-muted">Jakarta Selatan, DKI Jakarta</p>
+                  <p class="mb-1 text-muted">+628211239111</p>
+                </div>
+
+                <div class="col-md-6 text-right">
+                  <p class="font-weight-bold">#</p>
+                  <p class="mb-1">
+                    <span class="text-muted">Reff ID : </span># 1425782
+                  </p>
+
+                  <p class="mb-1">
+                    <span class="text-muted"
+                      >Status Pembayaran :
+                      <div class="badge badge-warning">Menunggu Pembayaran</div>
+                    </span>
+                  </p>
+                </div>
+              </div>
+
+              <div class="row invoice-card-table">
+                <div class="col-md-12">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th class="border-0">#</th>
+                        <th class="border-0">Jenis Pembayaran</th>
+
+                        <th class="border-0">Nominal Tagihan</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>SPP Tetap - Juli</td>
+
+                        <td>Rp 500.000</td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>SPP Tetap - Agustus</td>
+
+                        <td>Rp 500.000</td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>SPP Tetap - September</td>
+
+                        <td>Rp 500.000</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <hr class="mx-3" />
+
+              <div class="total-price-card">
+                <div class="btn-lay">
+                  <button class="btn btn-bayar">Bayar Sekarang</button>
+                </div>
+
+                <div class="invoice-total">
+                  <p class="mb-2">Total Pembayaran</p>
+                  <div class="h2 font-weight-bold">Rp 1.500.000</div>
+                </div>
+              </div>
             </div>
           </div>
-          <h1>Under <span>Construction</span></h1>
-          <p>
-            We're still working for building this page, so you can enjoy this
-            page perfectly.
-          </p>
         </div>
       </section>
       <!-- End Page Content -->

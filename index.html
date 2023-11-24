@@ -75,11 +75,36 @@
               <li class="nav-item">
                 <a class="nav-link" href="donation.html">Sumbangan</a>
               </li>
-              <li class="nav-item">
-                <a href="profile-page.html" class="profile-menu">
+              <li class="nav-item dropdown">
+                <a
+                  href="#"
+                  class="profile-menu dropdown-toggle"
+                  id="dropdownProfile"
+                  data-toggle="dropdown"
+                  data-offset="10,20"
+                  role="button"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
                   <i class="bi bi-person-lines-fill"></i>
                   <span>&nbsp;Profil Siswa</span>
                 </a>
+                <div
+                  class="dropdown-menu dropdown-menu-end"
+                  aria-labelledby="dropdownProfile"
+                  style="min-width: 295px"
+                >
+                  <span class="dropdown-header">Menu Profil Siswa</span>
+                  <a class="dropdown-item" href="profile-page.html">
+                    <i class="bi bi-person-circle"></i>
+                    <span>&nbsp;Profil Saya</span></a
+                  >
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#logout">
+                    <i class="bi bi-box-arrow-right"></i>
+                    <span>&nbsp;Log Out</span>
+                  </a>
+                </div>
               </li>
             </ul>
           </div>
@@ -95,6 +120,7 @@
               Selamat Datang Wali,
               <span>Suhendra Setiawan!</span>
             </h3>
+            <hr />
           </div>
           <div class="notification">
             <div class="dropleft">
@@ -221,7 +247,7 @@
         <!-- Banner Carousel Section End -->
 
         <!-- Data Siswa Section -->
-        <div class="student-profile">
+        <!-- <div class="student-profile">
           <div class="student-title">
             <i class="bi bi-info-circle-fill"></i>
             <h3>Informasi Data Siswa</h3>
@@ -255,18 +281,17 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
         <!-- Data Siswa Section End -->
 
         <!-- Informasi Tagihan Section -->
-        <div class="info-tagihan mt-5">
+        <div class="info-tagihan mt-3">
           <div class="info-tagihan-title">
             <h3>Tagihan Pembayaran</h3>
             <p>
               Berikut ini merupakan tagihan pembayaran anda yang perlu
               dibayarkan sesuai dengan nominal dan sebelum batas tanggal yang
-              tertera. Informasi Pembayaran
-              <a href="petunjuk-pembayaran.html">Klik Disini</a>
+              tertera.
             </p>
           </div>
 
@@ -326,7 +351,7 @@
                   proses pembayaran.
                 </p>
               </div>
-              <div>
+              <div class="btn-lay">
                 <a href="payment-bill.html" class="btn-bayar"
                   ><i class="bi bi-wallet-fill"></i> Bayar Sekarang</a
                 >
